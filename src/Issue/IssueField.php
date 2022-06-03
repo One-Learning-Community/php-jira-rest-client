@@ -278,7 +278,7 @@ class IssueField implements \JsonSerializable
      * @see \JiraRestApi\Issue\IssueFieldV3::addDescriptionParagraph
      *
      */
-    public function setDescription(?string $description) : static
+    public function setDescription($description) : static
     {
         if (!empty($description)) {
             $this->description = $description;
