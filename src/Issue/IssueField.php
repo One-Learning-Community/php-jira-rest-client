@@ -274,11 +274,13 @@ class IssueField implements \JsonSerializable
      *
      * REST API V3 must use addDescriptionXXXX
      *
+     * @param string|null $description
+     *
      * @see \JiraRestApi\Issue\IssueFieldV3::addDescriptionHeading
      * @see \JiraRestApi\Issue\IssueFieldV3::addDescriptionParagraph
      *
      */
-    public function setDescription($description) : static
+    public function setDescription($description)
     {
         if (!empty($description)) {
             $this->description = $description;
