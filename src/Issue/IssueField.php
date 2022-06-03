@@ -24,7 +24,8 @@ class IssueField implements \JsonSerializable
 
     public ?DateTimeInterface $updated = null;
 
-    public string $description;
+    /** @var string */
+    public $description;
 
     public ?Priority $priority = null;
 
@@ -34,7 +35,8 @@ class IssueField implements \JsonSerializable
 
     public Project $project;
 
-    public ?string $environment;
+    /** @var string|null */
+    public $environment;
 
     /* @var \JiraRestApi\Issue\Component[] This property must don't describe the type feature for JSON deserialized. */
     public $components;
